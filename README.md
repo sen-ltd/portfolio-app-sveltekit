@@ -6,7 +6,7 @@ SEN Portfolio ブラウザの **SvelteKit 実装**。`adapter-static` による 
 
 **Live demo**: https://sen.ltd/portfolio/portfolio-app-sveltekit/
 
-![Screenshot](./docs/screenshot.png)
+![Screenshot](./assets/screenshot.png)
 
 ## バンドルサイズ比較（更新）
 
