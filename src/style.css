@@ -306,6 +306,54 @@ main {
   border-color: var(--accent-2);
 }
 
+/* Icon link row: brand-colored SVGs for github/X/qiita/dev.to.
+   Dark theme bumps the SVG canvas to near-white so dark brand marks
+   (github/X/dev.to) stay visible; Qiita green is bright enough to read. */
+.icon-links {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+}
+.icon-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 6px;
+  background: #e6e8ec;
+  color: var(--fg);
+  text-decoration: none;
+  transition: background 0.12s, transform 0.12s;
+}
+.icon-link:hover {
+  background: #ffffff;
+  transform: translateY(-1px);
+}
+.icon-link:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.article-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 24px;
+  padding: 0 8px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.12s, border-color 0.12s;
+}
+.article-badge:hover {
+  color: var(--accent-2);
+  border-color: var(--accent-2);
+}
+
 .tests-badge {
   padding: 4px 8px;
   background: var(--panel-2);

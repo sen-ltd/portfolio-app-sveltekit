@@ -18,10 +18,12 @@ export type StageId =
   | 'done';
 
 export type Article = {
-  platform: 'zenn' | 'devto' | 'note' | 'qiita' | 'medium';
+  platform: 'sen' | 'zenn' | 'devto' | 'note' | 'qiita' | 'medium';
   url: string;
   lang: Lang;
 };
+
+export type Source = 'public' | 'closed';
 
 export type Entry = {
   slug: string;
@@ -29,6 +31,7 @@ export type Entry = {
   name: LocalizedText;
   pitch: LocalizedText;
   stage: StageId;
+  source?: Source;
   category: string;
   tech: string[];
   tags?: string[];
@@ -38,6 +41,9 @@ export type Entry = {
   articles: Article[];
   testCount?: number;
   createdAt: string;
+  social?: {
+    twitter?: string;
+  };
 };
 
 export type Category = {

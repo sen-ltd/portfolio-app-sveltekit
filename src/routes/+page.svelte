@@ -6,6 +6,7 @@
   import { loadPortfolioData } from '../data';
   import { MESSAGES, detectDefaultLang } from '../i18n';
   import type { PortfolioData } from '../types';
+  import IconLinks from '../lib/IconLinks.svelte';
 
   // ---- State (Svelte 5 Runes) -----------------------------------------------
 
@@ -220,20 +221,7 @@
                   ↗ {m.demoLabel}
                 </a>
               {/if}
-              {#if entry.github}
-                <a href={entry.github} class="action-btn" target="_blank" rel="noopener">
-                  {m.githubLabel}
-                </a>
-              {/if}
-              {#if entry.articles.length > 0}
-                <div class="articles">
-                  {#each entry.articles as a}
-                    <a href={a.url} class="article-link" target="_blank" rel="noopener">
-                      {a.platform}
-                    </a>
-                  {/each}
-                </div>
-              {/if}
+              <IconLinks {entry} {lang} />
               {#if entry.testCount && entry.testCount > 0}
                 <span class="tests-badge">{m.testsLabel(entry.testCount)}</span>
               {/if}
